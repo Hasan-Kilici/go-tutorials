@@ -1,0 +1,54 @@
+<html>
+<head>
+    <title>Websocket Chat App</title>
+<link rel="stylesheet" type="text/css" href="./static/style.css">
+
+</head>
+<body>
+    <div id="chat-window">
+        <div id="output"></div>
+        <div class="input-container">
+        <input type="text" id="message" placeholder="Message">
+        <button id="send">Send</button>
+        </div>
+    </div>
+<script>
+  const username = prompt("Kullanıcı adı giriniz:");
+  window.onload = ()=>{
+   setTimeout(()=>{
+    socket.send(JSON.stringify({
+      username: "<b style='color:red'>Chat bot</b>",
+      message: `<b>${username}</b> Odaya katıldı`,
+    }));
+   },1300);
+  }
+  const socket = new WebSocket("wss://"+window.location.host+"/ws");
+
+  const output = document.getElementById("output");
+  const message = document.getElementById("message");
+  const send = document.getElementById("send");
+
+  socket.onopen = function (event) {
+    console.log("Websockete bağlanıldı");
+  };
+
+  socket.onmessage = function (event) {
+    console.log("Gönderilen mesaj:", event.data);
+    const msg = JSON.parse(event.data);
+    output.innerHTML += `<p><strong>${msg.username}: </strong>${msg.message}</p>`;
+  };
+
+  socket.onclose = function (event) {
+    console.log("Websocket kapatıldı event kodu :", event.code);
+  };
+
+  send.addEventListener("click", function () {
+    socket.send(JSON.stringify({
+      username: username,
+      message: message.value
+    }));
+    message.value = "";
+  });
+</script>
+</body>
+</html>
