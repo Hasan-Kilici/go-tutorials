@@ -37,40 +37,40 @@ yazın, ve sonra Kodlamaya başlayın!
     - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/mininggame.go">Maden oyunu</a>
     - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/rock-paper-%20scissors.go">Taş kağıt makas</a>
     - ...
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http">HTTP Server Örnekleri</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/gin-portfolio">Gin Portfolio</a>
-    - <a href="https://github.com/Hasan-Kilici/go-portfolio-template">Go Portfolio</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/go-cookie-clicker">Go Cookie Clicker</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/gin-mongodb-todo-list">Go Gin Mongodb Todo List</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/gin-mongodb-blogs-news-website">Go Gin MongoDB blog - haber sitesi</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/3adimda-is-clone/v1">Go Gin Go-cache mongodb 3 adımda iş clone (versiyon versiyon)</a>
-    - ...
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/desktop">Desktop Örnekleri</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/desktop/electron/calculator">Hesap makinesi</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/mongo-db">NoSQL DB( MongoDB )</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/connection.go">Connection</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/insert.go">insert</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/delete.go">delete</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/update.go">update</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/sql">SQL</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/connection.go">connection</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/insert.go">insert</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/delete.go">delete</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/update.go">update</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/mysql">MySQL</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/connection.go">connection</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/insert.go">insert</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/delete.go">delete</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/update.go">update</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/redis">Redis</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/connection.go">connection</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/insert.go">insert</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/delete.go">delete</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/update.go">update</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/template/react">Templateler</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/template/react">Go + Gin + React</a>
-  -  <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/desktop">Go ile Windowsa, Linuxa, MacOS'a uygulama geliştirmek</a>
-      - Electron kullanımı
-      - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/desktop">Electron örnek projeler</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http">HTTP Server Örnekleri</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/gin-portfolio">Gin Portfolio</a>
+  - <a href="https://github.com/Hasan-Kilici/go-portfolio-template">Go Portfolio</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/go-cookie-clicker">Go Cookie Clicker</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/gin-mongodb-todo-list">Go Gin Mongodb Todo List</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/gin-mongodb-blogs-news-website">Go Gin MongoDB blog - haber sitesi</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/3adimda-is-clone/v1">Go Gin Go-cache mongodb 3 adımda iş clone (versiyon versiyon)</a>
+  - ...
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/desktop">Desktop Örnekleri</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/desktop/electron/calculator">Hesap makinesi</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/mongo-db">NoSQL DB( MongoDB )</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/connection.go">Connection</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/insert.go">insert</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/delete.go">delete</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mongo-db/update.go">update</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/sql">SQL</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/connection.go">connection</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/insert.go">insert</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/delete.go">delete</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/sql/update.go">update</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/mysql">MySQL</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/connection.go">connection</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/insert.go">insert</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/delete.go">delete</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/mysql/update.go">update</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/db/redis">Redis</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/connection.go">connection</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/insert.go">insert</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/delete.go">delete</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/db/redis/update.go">update</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/template/react">Templateler</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/template/react">Go + Gin + React</a>
+-  <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/desktop">Go ile Windowsa, Linuxa, MacOS'a uygulama geliştirmek</a>
+    - Electron kullanımı
+    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/desktop">Electron örnek projeler</a>
 
   
