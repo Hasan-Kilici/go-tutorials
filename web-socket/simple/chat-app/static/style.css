@@ -1,0 +1,26 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+#output{
+  width:100%;
+  max-height:95vh;
+  height:95vh;
+  padding:8px;
+  overflow-x:auto;
+}
+.input-container{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.input-container input{
+  width:85%;
+  padding:12px;
+}
+.input-container button{
+ padding:12px;
+}
