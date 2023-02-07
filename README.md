@@ -17,22 +17,22 @@ yazın, ve sonra Kodlamaya başlayın!
 <br><br><br>
 İçindekiler:
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/variables">Değişkenler</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/data%20types">Veri Tipleri</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/if-else">Koşullar</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/loops">Döngüler</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/functions">Fonksiyonlar</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/array%20(diziler)">Diziler</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/timer">Zamanlayıcılar</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http">HTTP Server</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin">Gin</a>
-       - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin/body-parser">body parser</a>
-       - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin/file-upload">file uploader</a> 
-       - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin/go-cache">go cache</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber">Go-Fiber</a>
-       - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber/body-parser">body parser</a>
-       - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber/file-upload">file uploader</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/data%20types">Veri Tipleri</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/if-else">Koşullar</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/loops">Döngüler</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/functions">Fonksiyonlar</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/array%20(diziler)">Diziler</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/timer">Zamanlayıcılar</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http">HTTP Server</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin">Gin</a>
+     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin/body-parser">body parser</a>
+     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin/file-upload">file uploader</a> 
+     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/gin/go-cache">go cache</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber">Go-Fiber</a>
+     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber/body-parser">body parser</a>
+     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber/file-upload">file uploader</a>
   - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/web-socket">Websocket</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/web-socket/simple/chat-app">Chat uygulaması</a>
+     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/web-socket/simple/chat-app">Chat uygulaması</a>
   - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/console">Console Uyguluması örnekleri</a>
     - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/mininggame.go">Maden oyunu</a>
     - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/rock-paper-%20scissors.go">Taş kağıt makas</a>
