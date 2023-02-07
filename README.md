@@ -31,12 +31,12 @@ yazın, ve sonra Kodlamaya başlayın!
   - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber">Go-Fiber</a>
      - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber/body-parser">body parser</a>
      - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/http/go-fiber/file-upload">file uploader</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/web-socket">Websocket</a>
-     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/web-socket/simple/chat-app">Chat uygulaması</a>
-  - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/console">Console Uyguluması örnekleri</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/mininggame.go">Maden oyunu</a>
-    - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/rock-paper-%20scissors.go">Taş kağıt makas</a>
-    - ...
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/web-socket">Websocket</a>
+   - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/web-socket/simple/chat-app">Chat uygulaması</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/console">Console Uyguluması örnekleri</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/mininggame.go">Maden oyunu</a>
+  - <a href="https://github.com/golang-dersleri/go-tutorials/blob/main/simple/console/rock-paper-%20scissors.go">Taş kağıt makas</a>
+  - ...
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http">HTTP Server Örnekleri</a>
   - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/simple/http/gin-portfolio">Gin Portfolio</a>
   - <a href="https://github.com/Hasan-Kilici/go-portfolio-template">Go Portfolio</a>
