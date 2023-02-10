@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Deprem Bilgileri</title>
+    	<link rel="stylesheet" href="/static/style.css">
+	<script src="/static/script.js"></script>
+  	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+      <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+      body{
+        background:black;
+        color:white;
+      }
+    </style>
+  </head>
+  <body>
+     {{ template "navbar.tmpl" .}}
+   <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([38.9637, 35.2433], 6);
+ 
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '{{.Location}}'
+      }).addTo(map);
+ 
+      L.marker([{{.Latitude}}, {{.Longitude}}]).addTo(map);
+    </script>
+    <h1>Deprem Bilgileri</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <td>{{ .ID }}</td>
+      </tr>
+      <tr>
+        <th>Tarih</th>
+        <td>{{ .Date }}</td>
+      </tr>
+      <tr>
+        <th>Enlem</th>
+        <td>{{ .Latitude }}</td>
+      </tr>
+      <tr>
+        <th>Boylam</th>
+        <td>{{ .Longitude }}</td>
+      </tr>
+      <tr>
+        <th>Derinlik</th>
+        <td>{{ .Depth }} KM</td>
+      </tr>
+      <tr>
+        <th>Şiddet</th>
+        <td>{{ .Violence }} ML</td>
+      </tr>
+      <tr>
+        <th>Konum</th>
+        <td>{{ .Location }}</td>
+      </tr>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<html>
+  <head>
+	<link rel="stylesheet" href="/static/style.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+	<script src="/static/script.js"></script>
+    <link rel="stylesheet" href="https://pagination.js.org/dist/2.5.0/pagination.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://pagination.js.org/dist/2.5.0/pagination.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+	  </style>
+  </head>
+  <body style="background:black">
+       {{ template "navbar.tmpl" .}}
+  <div id="map"></div>
+  <div class="container">
+  <div id="depremler" class="row justify-content-center">
+
+  </div>
+  </div>
+<script>
+ var map = L.map('map').setView([38.9637, 35.2433], 6);
+ 
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: 'Son Depremler'
+      }).addTo(map);
+
+let data;
+	fetch("/api/last/earthquakes").then(async(res)=>{
+		data = await res.json();
+		setTimeout(()=>{
+			for(let i = 0;i < 50;i++){
+				if(data[i].violence > 2 && data[i].violence < 4){
+				document.getElementById("depremler").innerHTML += `
+				<div class="col-6">
+				<div class="card mt-3 text-light" onclick="window.location.href = '/deprem/${data[i].ID}'" style="background-color:blue">
+				  <div class="card-body">
+					<label>Hafif</label>
+					<h3>${data[i].violence} ML</h3>
+					<label>Büyüklüğünde Deprem</label><br><br>
+					<label>Lokasyon : ${data[i].location}</label>
+				  </div>
+				</div>
+				</div>
+				`;
+				} else if(data[i].violence > 4 && data[i].violence < 6){
+				document.getElementById("depremler").innerHTML += `
+				<div class="col-6">
+				<div class="card mt-3 text-light" onclick="window.location.href = '/deprem/${data[i].ID}'" style="background-color:yellow">
+				  <div class="card-body">
+					<label>Orta</label>
+					<h3>${data[i].violence} ML</h3>
+					<label>Büyüklüğünde Deprem</label><br><br>
+					<label>Lokasyon : ${data[i].location}</label>
+				  </div>
+				</div>
+				</div>`
+				} else if(data[i].violence > 6){
+				document.getElementById("depremler").innerHTML += `
+				<div class="col-6">
+				<div onclick="window.location.href = '/deprem/${data[i].ID}'" class="card mt-3 text-light" style="background-color:red">
+				  <div class="card-body">
+					<label>Şiddetli</label>
+					<h3>${data[i].violence} ML</h3>
+					<label>Büyüklüğünde Deprem</label><br><br>
+					<label>Lokasyon : ${data[i].location}</label>
+				  </div>
+				</div>
+				</div>`
+				}
+				L.marker([data[i].latitude,data[i].longitude]).addTo(map);
+			}
+		},1)
+	})
+
+</script>
+</body>
+</html>
