@@ -72,5 +72,7 @@ yazın, ve sonra Kodlamaya başlayın!
 -  <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/desktop">Go ile Windowsa, Linuxa, MacOS'a uygulama geliştirmek</a>
     - Electron kullanımı
     - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/desktop">Electron örnek projeler</a>
+- <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/pdf">PDF</a>
+    - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/pdf/generate-barcode-design">Barcode design generator</a>
 
   
