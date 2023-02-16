@@ -1,0 +1,61 @@
+{{ template "head.tmpl" }}
+<script>needgithub = true;</script>
+<div class="container-fluid text-light" style="background-color:#000">
+    <div class="container">
+      <div class="row justify-content-around">
+        <div class="col-md-2 mt-5 mb-5">
+          <img src="https://avatars.githubusercontent.com/u/105741983?v=4" class="rounded-circle w-100">
+        </div>
+        <div class="col-md-6 mt-5 mb-5">
+          <h4>Merhaba, Ben Hasan KILICI</h4>
+          <p>17 Yaşındayım, uzun zamandır web geliştiriciliği ile ilgileniyorum.<br>
+          SMTAL'de 12.Sınıf Bilişim web tasarım okuyorum.<br>
+          <b>Go</b>,<b>JS</b>,<b>Python</b>,<b>C</b>,<b>C++</b>,<b>C#</b> ve <b>PHP</b> Biliyorum.</p>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container mt-3">
+<h3>Bloglar</h3>
+{{range .blogs}}
+  <div class="mt-3 col-md-12" onclick="window.location.href = '/blog/{{ .ID.Hex }}'">
+    <div class="card">
+      <div class="card-body">
+        <h4>{{ .Title }}</h4>
+        <label>{{ .Description }}</label>
+      </div>
+    </div>
+  </div>
+{{end}}
+<h3 class="mt-3">Son Repositoryler</h3>
+  <div id="repos" class="row">
+
+  </div>
+</div>
+<script>
+window.onload = async()=>{
+    let repos;
+        fetch("https://api.github.com/users/hasan-kilici/repos").then(async(data)=>{
+            repos = await data.json();
+            setTimeout(()=>{
+            for(let i = 0;i < repos.length;i++){
+                    document.getElementById("repos").innerHTML += `
+                    <div class="col-md-4 mt-2 mb-2">
+                      <div class="card">
+                        <div class="card-body">
+                            ${repos[i].name}
+                        </div>
+                        <div class="card-footer d-flex gap-2 align-items-center">
+                          <div><i class="fa-solid fa-circle text-primary"></i> ${repos[i].language}</div>
+                          <div><i class="fa-solid fa-star"></i> ${repos[i].stargazers_count}</div>
+                        </div>
+                      </div>
+                    </div>
+                    `;
+                    console.log(i)
+            }
+        },1000)
+        })
+      
+}
+</script>

@@ -1,0 +1,19 @@
+{{ template "head.tmpl" }}
+<body class="d-flex align-items-center justify-content-center">
+<div class="col-md-4 mt-5">
+    <div class="card">
+        <div class="card-header">
+            <h3>İletişime geç</h3>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/contact-me">
+                <label class="mt-1">İsim</label>
+                <input class="form-control mt-1" type="text" id="name" name="name">
+                <label class="mt-1">Mesaj</label>
+                <textarea class="form-control mt-1" id="message" name="message"></textarea>
+                <input class="btn btn-dark mt-4" type="submit">
+            </form>
+        </div>
+    </div>
+</div>
+</body>

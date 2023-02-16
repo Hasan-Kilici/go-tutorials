@@ -1,0 +1,13 @@
+{{ template "head.tmpl" }}
+<title>{{ .title }}</title>
+<div class="container">
+<h1>{{ .title }}</h1>
+<img class="w-100 rounded mt-3 mb-3" src="{{ .banner }}"><br>
+<div id="blog">
+
+</div>
+{{ .author }}
+</div>
+<script>
+window.onload = document.getElementById("blog").innerHTML = `{{ .html }}`;
+</script>

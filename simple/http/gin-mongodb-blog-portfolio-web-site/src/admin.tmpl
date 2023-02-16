@@ -1,0 +1,55 @@
+{{ template "head.tmpl" }}
+<div class="container">
+<div class="col-md-10 mt-5">
+<div class="card">
+<div class="card-header">
+    <h3>Blog Ekle</h3>
+</div>
+<div class="card-body">
+<form action="/create/blog" method="POST" enctype="multipart/form-data">
+  <label>Blog Başlığı</label>
+  <input class="form-control mt-1" type="text" name="btitle" placeholder="Blog Başlığı">
+  <label>Blog açıklaması</label>
+  <input class="form-control mt-1" type="text" name="bdescription" placeholder="Blog Açıklaması">
+  <label>Blog içeriği [HTML]</label>
+  <textarea class="form-control mt-1" name="bhtml" placeholder="Blog İçeriği"></textarea>
+  <label>Banner</label>
+  <input class="form-control mt-1" type="file" name="file" accept="image/*">
+  <input class="btn btn-dark mt-4" type="submit" value="Gönder">
+</form>
+</div>
+</div>
+{{range .blogs}}
+  <div>
+  <div class="col-md-12 mt-5">
+  <div class="card">
+  <div class="card-body">
+    <h3>{{ .Title }}</h3>
+    <p>{{ .Description }}</p>
+    <div id="{{ .ID.Hex }}" style=" display:none;">
+    <form method="POST" action="/edit/blog/{{ .ID.Hex }}">
+        <label>Blog Başlığı</label>
+        <input value="{{ .Title }}" class="form-control mt-1" type="text" name="btitle" placeholder="Blog Başlığı">
+        <label>Blog açıklaması</label>
+        <input value="{{ .Description }}" class="form-control mt-1" type="text" name="bdescription" placeholder="Blog Açıklaması">
+        <label>Blog içeriği [HTML]</label>
+        <textarea class="form-control mt-1" name="bhtml" placeholder="Blog İçeriği">{{ .Html }}</textarea>
+        <label>Banner</label>
+        <input class="form-control mt-1" type="file" name="file" accept="image/*">
+        <input class="btn btn-dark mt-4" type="submit" value="Düzenle">
+    </form>
+    <button class="btn btn-danger" onclick="closeBox('{{ .ID.Hex }}')">Iptal</button>
+    </div>
+    </div>
+    <div class="card-footer d-flex align-items-start">
+    <form method="POST" action="/delete/blog/{{ .ID.Hex }}">
+    <input class="btn text-danger" type="submit" value="sil">
+    </form>
+    <button class="btn text-primary" onclick="openBox('{{ .ID.Hex }}')">Düzenle</button>
+    <button class="btn text-primary" onclick='window.location.href = "/blog/{{ .ID.Hex }}"'>Blogu görüntüle</button>
+    </div>
+  </div>
+  </div>
+  </div>
+{{end}}
+</div>
