@@ -25,7 +25,7 @@ yazın, ve sonra Kodlamaya başlayın!
 <h4>Go içinde kullanabileceğiniz Web Frameworkler</h4>
 
 <li><a href="https://docs.gofiber.io/">Go fiber</a>
-
+<li><a href="https://gin-gonic.com/">Gin gonic</a></li>
 <br><br><br>
 İçindekiler:
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/variables">Değişkenler</a>
