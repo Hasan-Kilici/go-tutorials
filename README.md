@@ -15,6 +15,18 @@ $ go mod init
 yazın, ve sonra Kodlamaya başlayın!
  <a href="https://pkg.go.dev/cmd/go">bütün komutları görmek için tıklayın</a>
 <br><br><br>
+<h4>Bu Repository Dışında Bakabileceğiniz Kaynaklar</h4>
+<li><a href="https://app.patika.dev/paths/baslangic-seviye-go-web-development-patikasi">Patika Dev (Başlangıç seviye go patikası)</a></li>
+<li><a href="https://app.patika.dev/paths/orta-seviye-go-web-development-patikasi">Patika Dev (Orta seviye go patikası)</a></li>
+<li><a href="https://www.w3schools.com/go/index.php">W3Schools GO Tutorial</a></li>
+<li><a href="https://go.dev/doc/">Gonun kendi dökümasyonu</a></li>
+<li><a href="https://devdocs.io/go/">Devdocs Go Dükmasyonu (Düşünebileceğiniz her şey var)</a></li>
+
+<h4>Go içinde kullanabileceğiniz Web Frameworkler</h4>
+
+<li><a href="https://docs.gofiber.io/">Go fiber</a>
+
+<br><br><br>
 İçindekiler:
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/variables">Değişkenler</a>
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/data%20types">Veri Tipleri</a>
