@@ -26,8 +26,11 @@ yazın, ve sonra Kodlamaya başlayın!
 
 <li><a href="https://docs.gofiber.io/">Go fiber</a>
 <li><a href="https://gin-gonic.com/">Gin gonic</a></li>
+
 <br><br><br>
+
 İçindekiler:
+
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/variables">Değişkenler</a>
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/data%20types">Veri Tipleri</a>
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/if-else">Koşullar</a>
