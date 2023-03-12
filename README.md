@@ -23,17 +23,19 @@ yazın, ve sonra Kodlamaya başlayın!
 <li><a href="https://devdocs.io/go/">Devdocs Go Dükmasyonu (Düşünebileceğiniz her şey var)</a></li>
 
 <h4>Go içinde kullanabileceğiniz Web Frameworkler</h4>
-
 <li><a href="https://docs.gofiber.io/">Go fiber</a>
 <li><a href="https://gin-gonic.com/">Gin gonic</a></li>
-
 <h4>Go içinde kullanabileceğiniz PDF Paketleri</h4>
-
 <li><a href="https://github.com/unidoc/unipdf">UniPDF</a></li>
-
 <br>
-
-İçindekiler:
+<h4>Go içinde kullanabileceğiniz microchip paketleri</h4>
+<li><a href="https://tinygo.org/docs/">TinyGO</a></li>
+<li><a href="https://pkg.go.dev/github.com/AdvancedClimateSystems/io/i2c/microchip#section-readme">Microchip</a></li>
+<br>
+<h4>Go içinde kullanabileceğiniz Makine öğrenimi paketleri</h4>
+<li><a href="https://github.com/tensorflow/tensorflow/tree/master/tensorflow/go">Tensorflow</a></li>
+</br>
+Burada öğrenebilecekleriniz:
 
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/variables">Değişkenler</a>
 - <a href="https://github.com/golang-dersleri/go-tutorials/tree/main/data%20types">Veri Tipleri</a>
