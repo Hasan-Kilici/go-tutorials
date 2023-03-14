@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Blog Oluşturma Formu</title>
+  <link rel="stylesheet" href="./static/style.css">
+  <script src="./static/kawethra.js"></script>
+</head>
+<body>
+    <a href="#">Anasayfa</a>
+    <a href="/#/about">Hakkımızda</a>
+    <a href="/#/login">Giriş yap</a>
+    <a href="/#/register">Kayıt ol</a>
+    <a href="/#/blog?param=1">Bloglar</a>
+    {{ .userStatus }}
+<main id="main">
+
+</main>
+<script>
+
+        let user = "{{ .userStatus }}";
+        let userdata;
+        window.onload = ()=>{
+          if(user == "true"){
+                userdata = {
+                    username: "{{ .username }}",
+                    email:    "{{ .email }}",
+                    id:       "{{ .userId }}",
+                }
+            }  
+        }
+        addRoute('',"./components/home.kawethra","Anasayfa",()=>{
+          let blogs;
+          fetch("/api/blogs").then(async(data)=>{
+              blogs = await data.json();
+          }).then(async(set)=>{
+              console.log(blogs)
+              if(blogs.length < 10){
+                  for(let i = 0;i < blogs.length;i++){
+                      document.getElementById("blog").innerHTML += `
+                      <div><a href="/#/blog/?param=${blogs[i].ID}">${blogs[i].Title}</a></div><br>
+                      `
+                  }
+              } else {
+              for(let i = 0;i < 10;i++){
+                      document.getElementById("blog").innerHTML += `
+                      <div><a href="/#/blog/?param=${blogs[i].ID}">${blogs[i].Title}</a></div><br>
+                      `
+                  }
+              }
+          })
+        })
+        addRoute('/about',"./components/about.kawethra","Hakkımda")
+        addRoute('/login',"./components/login.kawethra","Giriş Yap")
+        addRoute('/register',"./components/register.kawethra","Kayıt ol")
+        addRoute('/blog', "./components/blog.kawethra", "Bloglar",()=>{
+          let blog;
+          fetch(`/api/blogs/${params[1]}`).then(async(data)=>{
+              blog = await data.json();
+          }).then(async(set)=>{
+              if(blogs.error){
+                  document.getElementById("blogs").innerHTML = "Blog Bulunamadı";
+              } else {
+                  document.getElementById("blogs").innerHTML = await blog.HTML;
+                  document.title = await blog.Title;
+              }
+              console.log(await blog.error)
+              setTimeout(()=>{
+                  if(document.getElementById("blogs").innerHTML == "undefined"){
+                      document.getElementById("blogs").innerHTML = "Blog Bulunamadı";      
+                  }
+              },100)
+          })
+        })
+
+
+function findBlog(){
+
+}
+
+function listBlogs(){
+}
+</script>
+</body>
+</html>

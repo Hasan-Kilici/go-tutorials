@@ -1,0 +1,24 @@
+<script>
+let blog;
+fetch(`/api/blogs/${params[1]}`).then(async(data)=>{
+    blog = await data.json();
+}).then(async(set)=>{
+    if(blogs.error){
+        document.getElementById("blogs").innerHTML = "Blog Bulunamadı";
+    } else {
+        document.getElementById("blogs").innerHTML = await blog.HTML;
+        document.title = await blog.Title;
+    }
+    console.log(await blog.error)
+    setTimeout(()=>{
+        if(document.getElementById("blogs").innerHTML == "undefined"){
+            document.getElementById("blogs").innerHTML = "Blog Bulunamadı";      
+        }
+    },100)
+})
+</script>
+<div id="page" title="Bloglar">
+    <div id="blogs">
+
+    </div>
+</div>

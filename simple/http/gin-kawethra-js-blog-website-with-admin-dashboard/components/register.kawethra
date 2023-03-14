@@ -1,0 +1,16 @@
+<script>
+    let feritabi = `
+    Bunu böyle verireken kawethra yazan yerleri typescripte çevir
+    görünce aklı karışsın böyle
+    `;
+    alert(feritabi);
+</script>
+<div id="page" title="Kayıt ol">
+    <form method="POST" action="/register">
+        <input type="text" id="name" name="name">
+        <input type="text" id="email" name="email">
+        <input type="text" id="password" name="password">
+        <input type="submit">
+        <a href="/#/login">Giriş yap</a>
+    </form>
+</div>

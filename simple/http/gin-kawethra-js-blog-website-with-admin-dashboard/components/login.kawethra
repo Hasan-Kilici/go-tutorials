@@ -1,0 +1,14 @@
+<script>
+alert("Zort")
+</script>
+<div id="page" if="user != 'true'" title="Giriş yap">
+    <form method="POST" action="/login">
+        <input type="text" id="email" name="email">
+        <input type="text" id="password" name="password">
+        <input type="submit">
+        <a href="/#/register">Hesabım yok Kayıt ol</a>
+    </form>
+</div>
+<div else-if="user == 'true'">
+    <h3>Kayıtlısın zaten aq</h3>
+</div>

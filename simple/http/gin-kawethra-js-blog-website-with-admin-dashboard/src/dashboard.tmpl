@@ -1,0 +1,154 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>{{ .title }}</title>
+  <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/classic/ckeditor.js"></script>
+  <script src="https://cdn.ckeditor.com/ckeditor5/32.0.0/decoupled-document/translations/tr.js"></script>
+</head>
+<body>
+<h3>Deneme</h3>
+<form action="/create/Blog" method="POST">
+    <input type="text" id="title" name="title">
+    <textarea id="html" name="html"></textarea><br><br>
+    <input type="submit">
+</form>
+  <script>
+    ClassicEditor
+      .create( document.querySelector( '#html' ), {
+        extraPlugins: [ MyCustomUploadAdapterPlugin ],
+        mediaEmbed: {
+          previewsInData: true,
+          __experimentalAllowInsertionAt: 'end'
+        },
+        language: 'tr',
+        image: {
+            styles: [
+                'alignLeft', 'alignCenter', 'alignRight'
+            ],
+            resizeOptions: [
+                {
+                    name: 'resizeImage:original',
+                    label: 'Orjinal boyuta döndür',
+                    value: null
+                },
+                {
+                    name: 'resizeImage:50',
+                    label: '50%',
+                    value: '50'
+                },
+                {
+                    name: 'resizeImage:75',
+                    label: '75%',
+                    value: '75'
+                },
+                {
+                    name: 'resizeImage:500',
+                    label: 'Maks. 500px',
+                    value: '500'
+                }
+            ],
+            toolbar: [
+                'imageStyle:alignLeft', 'imageStyle:alignCenter', 'imageStyle:alignRight',
+                '|',
+                'resizeImage:original', 'resizeImage:50', 'resizeImage:75', 'resizeImage:500',
+                '|',
+                'imageTextAlternative'
+            ],
+            resizeUnit: 'px',
+            toolbar: [
+            'imageStyle:alignLeft', 'imageStyle:full', 'imageStyle:alignRight',
+            '|',
+            'imageResize',
+            '|',
+            'imageTextAlternative'
+          ]
+        },
+        media: {
+            iframe: {
+                defaultAttributes: {
+                    width: '100%',
+                    height: '400',
+                    style: 'max-width: 800px; max-height: 600px;'
+                }
+            }
+        }
+      } )
+      .catch( error => {
+        console.error( error );
+      } );
+      
+    // Özel yükleme adaptörü eklentisi
+    class MyUploadAdapter {
+      constructor( loader ) {
+        this.loader = loader;
+      }
+
+      upload() {
+        return this.loader.file
+          .then( file => new Promise( ( resolve, reject ) => {
+            this._initRequest();
+            this._initListeners( resolve, reject, file );
+            this._sendRequest( file );
+          } ) );
+      }
+
+      _initRequest() {
+        const xhr = this.xhr = new XMLHttpRequest();
+
+        xhr.open( 'POST', 'resim-yukle.php', true );
+        xhr.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+      }
+
+      _initListeners( resolve, reject, file ) {
+        const xhr = this.xhr;
+        const loader = this.loader;
+        const genericErrorText = 'Bu dosya yüklenirken bir hata oluştu.';
+
+        xhr.addEventListener( 'error', () => reject( genericErrorText ) );
+        xhr.addEventListener( 'abort', () => reject() );
+        xhr.addEventListener( 'load', () => {
+          const response = xhr.response;
+
+          if ( !response || response.error ) {
+            return reject( response && response.error ? response.error.message : genericErrorText );
+          }
+
+          resolve( {
+            default: response.url
+          } );
+        } );
+
+        if ( xhr.upload ) {
+          xhr.upload.addEventListener( 'progress', evt => {
+            if ( evt.lengthComputable ) {
+              loader.uploadTotal = evt.total;
+              loader.uploaded = evt.loaded;
+            }
+          } );
+        }
+      }
+
+      _sendRequest( file ) {
+        const data = new FormData();
+
+        data.append( 'upload', file );
+
+        this.xhr.send( data );
+      }
+    }
+
+    function MyCustomUploadAdapterPlugin( editor ) {
+      editor.plugins.get( 'FileRepository' ).createUploadAdapter = ( loader ) => {
+        return new MyUploadAdapter( loader );
+      };
+    }
+  </script>
+  <style>
+    body > form > div > div.ck.ck-editor__main > div{
+        height:500px;
+    }
+  </style>
+</body>
+</html>

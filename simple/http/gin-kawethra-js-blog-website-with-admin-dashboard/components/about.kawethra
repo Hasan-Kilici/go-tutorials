@@ -1,0 +1,8 @@
+<div id="page" title="Hakkımızda">
+    <h3>Hakkımızda Zort</h3>
+</div>
+<style>
+    body{
+        background:red;
+    }
+</style>
