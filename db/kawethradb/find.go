@@ -6,6 +6,6 @@ import (
 )
 
 func main(){
-	find, _ := kawethradb.Find("./data/Ogrenciler.csv", "ID", 3)
+	find, _ := kawethradb.Find("./Ogrenciler.csv", "ID", 3)
 	fmt.Println(find)
 }
