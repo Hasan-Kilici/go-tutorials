@@ -20,6 +20,6 @@ func main() {
 		{ID: 4, Ad: "Hasan", Soyad: "KILICI", Sinif: 12},
 	}
 
-	kawethradb.Insert("./data/Ogrenciler.csv", ogrenci)
+	kawethradb.Insert("./Ogrenciler.csv", ogrenci)
         fmt.Println("Inserted!")
 }
